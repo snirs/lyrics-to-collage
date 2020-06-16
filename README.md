@@ -5,7 +5,6 @@
 
 <a href="https://www.shareicon.net/data/256x256/2015/09/15/641196_music_512x512.png"><img src="https://www.shareicon.net/data/256x256/2015/09/15/641196_music_512x512.png" title="FVCproductions" alt="FVCproductions"></a>
 
-
 **Flow**
 
 - get song lyrics
@@ -23,7 +22,7 @@
 
 - Run `yarn install` will install needed packages.
 
-## RUN
+## Run
 
 - Run `yarn start` to run th code.
 
