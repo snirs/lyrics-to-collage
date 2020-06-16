@@ -7,7 +7,7 @@
 
 > include terms/tags that can be searched
 
-<a href="https://www.shareicon.net/data/256x256/2015/09/15/641196_music_512x512.png"><img src="https://www.shareicon.net/data/256x256/2015/09/15/641196_music_256x256.png" title="FVCproductions" alt="FVCproductions"></a>
+<a href="https://www.shareicon.net/data/256x256/2015/09/15/641196_music_512x512.png"><img src="https://www.shareicon.net/data/256x256/2015/09/15/641196_music_512x512.png" title="FVCproductions" alt="FVCproductions"></a>
 
 
 **Badges will go here**
