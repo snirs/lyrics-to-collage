@@ -91,7 +91,7 @@ def main():
 
     # get images
     files = [os.path.join(args.folder, fn) for fn in os.listdir(args.folder)]
-    images = [fn for fn in files if os.path.splitext(fn)[1].lower() in ('.jpg', '.jpeg', '.png')]
+    images = [fn for fn in files]
     if not images:
         print('No images for making collage! Please select other directory with images!')
         exit(1)

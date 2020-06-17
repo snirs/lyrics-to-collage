@@ -25,7 +25,7 @@ async function extractKeyWords(text, numsOfKeys) {
         // console.log("add");
         console.log(ngram.ngram);
         ans.add(ngram.ngram);
-        if(ans.size >= 6){
+        if(ans.size >= 5){
           break;
         }
       }
