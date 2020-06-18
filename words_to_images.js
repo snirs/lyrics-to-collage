@@ -1,7 +1,5 @@
 const imageSearch = require('image-search-google');
 const download = require('image-downloader');
-const axios = require('axios')
-var unirest = require("unirest");
 const keyWords = require('./keyWords');
 const lyrics = require('./lyrics');
 const unsplash = require('./unsplash-search');
@@ -90,36 +88,6 @@ async function unsplash_download(word) {
     console.error(e)
   }
 }
+
 exports.saveImages = saveImages;
 
-
-
-
-
-
-
-
-
-
-
-
-
-// saveImages("R.E.M", "Losing My Religion")
-
-
-
-// const options = {
-//     url: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg',
-//     dest: '/home/snir/WorkSpace/min-projects/Digital-humanities/pictures/'
-//   }
-
-//   async function downloadIMG() {
-//     try {
-//       const { filename, image } = await download.image(options)
-//       console.log(filename) // => /path/to/dest/image.jpg
-//     } catch (e) {
-//       console.error(e)
-//     }
-//   }
-
-//   downloadIMG()

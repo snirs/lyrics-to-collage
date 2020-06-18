@@ -78,11 +78,11 @@ def make_collage(images, filename, width, init_height):
 def main():
     # prepare argument parser
     parse = argparse.ArgumentParser(description='Photo collage maker')
-    parse.add_argument('-f', '--folder', dest='folder', help='folder with images (*.jpg, *.jpeg, *.png)', default='.')
+    parse.add_argument('-f', '--folder', dest='folder', help='folder with images (*.jpg, *.jpeg, *.png)', default='./pictures')
     parse.add_argument('-o', '--output', dest='output', help='output collage image filename', default='collage.png')
-    parse.add_argument('-w', '--width', dest='width', type=int, help='resulting collage image width')
-    parse.add_argument('-i', '--init_height', dest='init_height', type=int, help='initial height for resize the images')
-    parse.add_argument('-s', '--shuffle', action='store_true', dest='shuffle', help='enable images shuffle')
+    parse.add_argument('-w', '--width', dest='width', type=int, help='resulting collage image width', default=1600)
+    parse.add_argument('-i', '--init_height', dest='init_height', type=int, help='initial height for resize the images', default=500)
+    parse.add_argument('-s', '--shuffle', action='store_true', dest='shuffle', help='enable images shuffle', )
 
     args = parse.parse_args()
     if not args.width or not args.init_height:

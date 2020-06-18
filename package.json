@@ -12,7 +12,10 @@
     "needle": "^2.5.0",
     "node-fetch": "^2.6.0",
     "node-pre-gyp": "^0.15.0",
+    "open-image": "^1.1.0",
     "prompts": "^2.3.2",
+    "python-shell": "^2.0.1",
+    "term-img": "^5.0.0",
     "unirest": "^0.6.0",
     "unsplash-js": "^6.0.0"
   },

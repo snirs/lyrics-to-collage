@@ -25,6 +25,5 @@ async function getImage(query) {
   }
 }
 
-// getImage("bear")
 
 exports.getImage = getImage;

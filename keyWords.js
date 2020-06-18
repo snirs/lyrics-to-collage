@@ -16,16 +16,13 @@ async function extractKeyWords(text, numsOfKeys) {
     console.log(text);
     console.log("\n");
     for (ngram of data.keywords) {
-      // console.log(String(ngram.ngram).toLowerCase());
-      if ((["verse", "whoa", "chorus", "outro", "Chorus", "Interlude"]. includes(String(ngram.ngram).toLowerCase()))) {
-        // console.log("exception");
-        // console.log(ngram.ngram);
+      if ((["verse", "whoa", "chorus", "outro", "Chorus", "Interlude", "intro", "pre-chorus"]. includes(String(ngram.ngram).toLowerCase()))) {
+
       }
       else {
-        // console.log("add");
         console.log(ngram.ngram);
         ans.add(ngram.ngram);
-        if(ans.size >= 5){
+        if(ans.size >= 6){
           break;
         }
       }
@@ -37,4 +34,3 @@ async function extractKeyWords(text, numsOfKeys) {
 exports.extractKeyWords = extractKeyWords;
 
 
-// extractKeyWords()

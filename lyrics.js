@@ -19,6 +19,4 @@ async function getLyrics(singer, song) {
 }
 
 
-// console.log(getLyrics("Dennis Lloyd", "NeverMind"));
-
 exports.getLyrics = getLyrics;
