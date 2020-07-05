@@ -3,6 +3,7 @@ const download = require('image-downloader');
 const keyWords = require('./keyWords');
 const lyrics = require('./lyrics');
 const unsplash = require('./unsplash-search');
+const pexels = require('./pexels');
 const googleSearch = require('./google-search');
 const imageSearchGoogle = require('image-search-google');
 
@@ -18,19 +19,20 @@ async function getImageUrl(word) {
     return image_url;
   }
   catch (err) {
-    console.log(err)
+    // console.log(err)
   }
 }
 
 async function saveImages(singer, song) {
   try {
     lyricData = await lyrics.getLyrics(singer, song);
-    lyric = lyricData.body.content[0].lyrics
+    lyric = lyricData.body.content[0].lyrics.replace(/ *\[[^\]]*]/g, '')
+    console.log(lyric);
     singer = String(lyricData.body.content[0].title).split("by")[1] || "";
     song = String(lyricData.body.content[0].title).split("by")[0] || "";
     console.log(song);
     GoogleSet = new Set();
-    unsplashSet = await keyWords.extractKeyWords(lyric, 10);
+    unsplashSet = await keyWords.extractKeyWords(lyric, 12);
     GoogleSet.add(song + singer + " single");
     GoogleSet.add(singer);
     console.log(unsplashSet, GoogleSet);
@@ -41,12 +43,12 @@ async function saveImages(singer, song) {
   
   for (word of GoogleSet) {
     console.log(word);
-    google_download(word);
+    await google_download(word);
   }
 
   for (word of unsplashSet) {
     console.log(word);
-    unsplash_download(word);
+    await unsplash_download(word);
   }
 
 }
@@ -70,7 +72,7 @@ async function google_download(word) {
     const { filename, word } = await download.image(options)
     console.log(filename) // => /path/to/dest/image.jpg
   } catch (e) {
-    console.error(e)
+    // console.log(e)
   }
 }
 
@@ -85,7 +87,27 @@ async function unsplash_download(word) {
     const { filename, word } = await download.image(options)
     console.log(filename) // => /path/to/dest/image.jpg
   } catch (e) {
-    console.error(e)
+    // console.log(e)
+    if(image_url){
+      await pexels_download(word);
+    }
+  }
+}
+
+
+async function pexels_download(word) {
+  console.log("---- pexels! ---")
+  image_url = await pexels.getImageURL(word)
+  console.log(image_url);
+  const options = {
+    url: image_url,
+    dest: './pictures/'
+  }
+  try {
+    const { filename, word } = await download.image(options)
+    console.log(filename) // => /path/to/dest/image.jpg
+  } catch (e) {
+    console.log(e)
   }
 }
 

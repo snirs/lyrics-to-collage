@@ -1,5 +1,7 @@
 
-const axios = require('axios')
+const axios = require('axios');
+const checkWord = require('check-word'),
+words = checkWord('en'); 
 type = module;
 
 async function extractKeyWords(text, numsOfKeys) {
@@ -13,17 +15,20 @@ async function extractKeyWords(text, numsOfKeys) {
         highlight: true
       }
     })
-    console.log(text);
+    // console.log(text);
     console.log("\n");
     for (ngram of data.keywords) {
-      if ((["verse", "whoa", "chorus", "outro", "Chorus", "Interlude", "intro", "pre-chorus"]. includes(String(ngram.ngram).toLowerCase()))) {
+      if ((["verse", "whoa", "chorus", "outro", "Chorus", "Interlude", "intro", "pre-chorus", "instrumental",
+            "ooh", "oh", "yea", "yeah", "wanna", "aah"]. includes(String(ngram.ngram).toLowerCase()))) {
 
       }
       else {
-        console.log(ngram.ngram);
-        ans.add(ngram.ngram);
-        if(ans.size >= 6){
-          break;
+        if(words.check(ngram.ngram)){
+          console.log(ngram.ngram);
+          ans.add(ngram.ngram);
+        }
+      if(ans.size >= 8){
+        break;
         }
       }
     }

@@ -13,7 +13,7 @@ const unsplash = new Unsplash({
         "X-Custom-Header": "foo"
     },
     // Optionally if using a node-fetch polyfill or a version of fetch which supports the timeout option, you can configure the request timeout for all requests
-    timeout: 500 // values set in ms
+    timeout: 1000 // values set in ms
 });
 
 
@@ -35,6 +35,6 @@ async function getImageURL(word) {
     }
 }
 
-getImageURL("wolf")
+// getImageURL("wolf")
 exports.getImageURL = getImageURL;
 

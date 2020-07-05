@@ -4,7 +4,6 @@ const words_to_images = require('./words_to_images');
 let {PythonShell} = require('python-shell');
 
 
- 
 const questions = [
   {
     type: 'text',
@@ -23,8 +22,8 @@ const questions = [
   console.log(response.artist, response.song);
   artist = response.artist;
   song = response.song;
-  words_to_images.saveImages(artist, song)
-  setTimeout(runPy,10000); // wait 10 sec and build collage from photos
+  await words_to_images.saveImages(artist, song)
+  setTimeout(runPy,5000); // wait 10 sec and build collage from photos
  
   // => response => { username, age, about }
 })();
