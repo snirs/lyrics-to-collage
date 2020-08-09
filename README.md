@@ -1,7 +1,7 @@
 
 # lyrics-to-collage
 
-> Given the name of an artist and song name, creates a collage from the song's keywords.
+> Given the name of an artist and song, creates a collage from the song's keywords.
 
 <a href="https://www.shareicon.net/data/256x256/2015/09/15/641196_music_512x512.png"><img src="https://www.shareicon.net/data/256x256/2015/09/15/641196_music_512x512.png" title="FVCproductions" alt="FVCproductions"></a>
 
