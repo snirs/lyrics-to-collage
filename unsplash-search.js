@@ -20,7 +20,7 @@ const unsplash = new Unsplash({
 async function getImageURL(word) {
     try{
         let data = "";
-    const image_url = await unsplash.search.photos(word, 1, 1, { orientation: "landscape" })
+        const image_url = await unsplash.search.photos(word, 1, 1, { orientation: "landscape" })
         .then(toJson)
         .then(json => {
             json.results;

@@ -1,6 +1,5 @@
 const prompts = require('prompts');
 const words_to_images = require('./words_to_images');
-// const Shell = require('./python-shell');
 let {PythonShell} = require('python-shell');
 
 
@@ -24,11 +23,7 @@ const questions = [
   song = response.song;
   await words_to_images.saveImages(artist, song)
   setTimeout(runPy,5000); // wait 10 sec and build collage from photos
- 
-  // => response => { username, age, about }
 })();
-
-
 
 function runPy() {
     let options = {
@@ -38,12 +33,9 @@ function runPy() {
         scriptPath: './',
     };
 
-    PythonShell.run('hello.py', options, function (err, results) {
+    PythonShell.run('collage-maker.py', options, function (err, results) {
         if (err) throw err;
         // results is an array consisting of messages collected during execution
         console.log(results);
     });
 }
-
-// exports.runPy = runPy;
-// //   hello.py -o pictures.jpg -w 800 -i 250 -s -f ./pictures 

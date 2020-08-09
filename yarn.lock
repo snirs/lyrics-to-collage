@@ -96,6 +96,11 @@ ajv@^6.5.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+american-english@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/american-english/-/american-english-1.0.1.tgz#8ec4c3550f8261fde234ffeeceaae028f94272d2"
+  integrity sha1-jsTDVQ+CYf3iNP/uzqrgKPlCctI=
+
 ansi-escapes@^4.1.0:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-4.3.1.tgz#a5c47cc43181f1f38ffd7076837700d395522a61"
@@ -790,6 +795,11 @@ is-url@^1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/is-url/-/is-url-1.2.4.tgz#04a4df46d28c4cff3d73d01ff06abeb318a1aa52"
   integrity sha512-ITvGim8FhRiYe4IQ5uHSkj7pVaPDrCTkNd3yq3cV7iZAcJdHTUMPMEHcqSOy9xZ9qFenQCvi+2wjH9a1nXqHww==
+
+is-word@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/is-word/-/is-word-1.0.4.tgz#be60141c8d93d67cc1ae341a650142ced12ba367"
+  integrity sha512-AKiRceZqb0c8o028B72FoF2/HesPHsMxFQu/pDRaKGTBU/rCF/CnSd9D55H2nvJkPab+xs98iPexI/PwiFerlw==
 
 isarray@~1.0.0:
   version "1.0.0"

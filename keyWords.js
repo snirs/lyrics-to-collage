@@ -1,7 +1,7 @@
 
 const axios = require('axios');
-const checkWord = require('check-word'),
-words = checkWord('en'); 
+var isWord = require("is-word")
+var englishWords = isWord('american-english');
 type = module;
 
 async function extractKeyWords(text, numsOfKeys) {
@@ -23,7 +23,7 @@ async function extractKeyWords(text, numsOfKeys) {
 
       }
       else {
-        if(words.check(ngram.ngram)){
+        if(englishWords.check(ngram.ngram)){
           console.log(ngram.ngram);
           ans.add(ngram.ngram);
         }
